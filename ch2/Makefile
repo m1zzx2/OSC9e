@@ -3,3 +3,8 @@ all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+
+quick_start:
+	git reset --hard HEAD~3
+	git pull
+	make all
